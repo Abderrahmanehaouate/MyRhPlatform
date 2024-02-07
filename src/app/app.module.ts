@@ -18,6 +18,10 @@ import {environment} from "../environments/enviroments";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {JobOfferReducer} from "./store/job-offer/job-offer.reducer";
 import {JobOfferEffects} from "./store/job-offer/job-offer.effects";
+import { NavbrComponent } from './components/navbr/navbr.component';
+import { StoreComponent } from './components/store/store.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import {JobOfferEffects} from "./store/job-offer/job-offer.effects";
     ShowJobOfferComponent,
     AddJobOfferComponent,
     ListJobOfferComponent,
-    HomeComponent
+    HomeComponent,
+    NavbrComponent,
+    StoreComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
