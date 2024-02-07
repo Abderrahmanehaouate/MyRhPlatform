@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {ActivatedRoute} from "@angular/router";
-import {getJobOffer, getJobOfferSuccess} from "../../../store/job-offer/job-offer.actions";
+import {getJobOffer} from "../../../store/job-offer/job-offer.actions";
 import {getJobOfferSelector} from "../../../store/job-offer/job-offer.selector";
 import {JobOffer} from "../../../models/job-offer.model";
 
@@ -11,6 +11,8 @@ import {JobOffer} from "../../../models/job-offer.model";
   styleUrls: ['./show-job-offer.component.css']
 })
 export class ShowJobOfferComponent implements OnInit {
+
+  isPostulationAchieved: boolean = false;
 
   jobOffer!: JobOffer;
 
@@ -24,5 +26,10 @@ export class ShowJobOfferComponent implements OnInit {
         this.jobOffer = data;
       })
     })
+  }
+
+  postuler() {
+    console.log("postuler")
+    this.isPostulationAchieved = true;
   }
 }
