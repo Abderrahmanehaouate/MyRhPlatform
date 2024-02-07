@@ -1,0 +1,53 @@
+
+
+
+<div class="flex flex-wrap lg:justify-around justify-center px-20 mt-10">
+
+
+
+  <a *ngFor="let jobOffer of jobOffers" routerLink="/show/{{jobOffer.id}}" class="container max-w-md lg:w-1/2  w-full md:px-4 lg:px-6 py-5 rounded overflow-hidden shadow-lg hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100">
+    <img class="w-full" src="https://www.kindpng.com/picc/m/697-6977322_jobseeker-hero-illustration-job-seeker-png-transparent-png.png" alt="Property Image">
+    <div class="px-6 py-4">
+      <div class="mb-2">
+        <h2 class="text-xl text-center font-bold text-gray-900">{{jobOffer.profile}}</h2>
+        <div class="flex justify-center items-center">
+          <svg fill="#000000" class="h-6 w-6" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 395.71 395.71" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738 c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388 C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191 c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"></path> </g> </g></svg>
+          <div class="mr-2 rounded-full bg-blue-600 py-1 px-2 text-xs font-medium text-white">{{jobOffer.city}}</div>
+
+        </div>
+      </div>
+      <div class="flex justify-around ">
+        <div class="flex items-center">
+          <img class="h-10 w-12"  src="../assets/student5651.jpg" />
+          <p class=" text-sm font-medium text-gray-700">{{jobOffer.educationLevel}}</p>
+
+          <ng-template #notRequired>Likan mer7ba</ng-template>
+        </div>
+        <div class="flex items-center">
+          <img class="h-8 w-8" src="https://cdn-icons-png.flaticon.com/256/1088/1088528.png" />
+          <p class="ml-2 text-sm font-medium text-gray-700">2 ans </p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <p class="text-3xl text-center font-extrabold text-blue-800">{{jobOffer.salary}}</p>
+      </div>
+    </div>
+    <div class="px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="https://via.placeholder.com/50" alt="Agent Image" class="mr-2 rounded-full object-cover" />
+        <div>
+          <p class="text-sm font-medium text-gray-800">{{jobOffer.company ? jobOffer.company.name : 'not found'}}</p>
+          <p class="text-xs text-gray-600">Real Estate Agent</p>
+        </div>
+      </div>
+      <div class="flex">
+        <a href="tel:{{jobOffer.company ? jobOffer.company.phone : 'not found'}}" class="rounded-full h-10 w-10 bg-white-500 p-1 text-white  hover:bg-gray-100 ">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/019/923/706/small/telephone-and-mobile-phone-icon-calling-icon-transparent-background-free-png.png" />
+        </a>
+        <a href="mailto:{{jobOffer.company ? jobOffer.company.email : 'email not found'}}" class="rounded-full h-10 w-10 bg-white-500 p-1 text-white  hover:bg-gray-100 ">
+          <img src="https://icon-library.com/images/small-email-icon-png/small-email-icon-png-4.jpg" />
+        </a>
+      </div>
+    </div>
+  </a>
+</div>
