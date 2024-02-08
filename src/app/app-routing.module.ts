@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'jobs', component: JobOffersComponent},
   { path: 'show/:id', component: ShowJobOfferComponent},
-  { path: '**', component: HomeComponent },
   { path: 'store' , component: StoreComponent},
   { path : 'login' , component: LoginComponent},
   { path : 'register' , component: RegisterComponent}

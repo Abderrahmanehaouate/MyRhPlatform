@@ -12,7 +12,7 @@ import {ShowJobOfferComponent} from "./components/job-offers/show-job-offer/show
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {StoreModule, StoreRootModule} from "@ngrx/store";
+import {StoreModule} from "@ngrx/store";
 import {EffectsModule} from "@ngrx/effects";
 import {environment} from "../environments/enviroments";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
