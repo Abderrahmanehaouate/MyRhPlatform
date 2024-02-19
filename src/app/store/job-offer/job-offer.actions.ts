@@ -11,7 +11,6 @@ export const ADD_JOB_OFFER_FAILURE = '[Job Offer] Add Job Offer Failure';
 
 export const GET_JOB_OFFER = '[Job Offer] Get Job Offer';
 export const GET_JOB_OFFER_SUCCESS = '[Job Offer] Get Job Offer Success';
-export const GET_JOB_OFFER_FAILURE = '[Job Offer] Get Job Offer Failure';
 
 export const loadJobOffers = createAction(LOAD_JOB_OFFERS);
 export const loadJobOffersSuccess = createAction(LOAD_JOB_OFFERS_SUCCESS,props<{list: JobOffer[]}>());

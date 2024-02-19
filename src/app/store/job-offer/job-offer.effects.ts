@@ -20,12 +20,14 @@ export class JobOfferEffects {
       exhaustMap((action) =>{
         return this.jobOfferService.getJobOffers().pipe(
           map((data) => {
-            return loadJobOffersSuccess({list: data})
+            // @ts-ignore
+            return loadJobOffersSuccess({list: data.content})
           }),
           catchError((error) => {
             return of(loadJobOffersFailure({errorMessage: error.message}))
           }))
   })))
+
   getJobOffer$ = createEffect(() =>
     this.actions$.pipe(
       ofType(getJobOffer),
@@ -38,7 +40,4 @@ export class JobOfferEffects {
             return of(loadJobOffersFailure({errorMessage: error.message}))
           }))
       })))
-
-
-
 }

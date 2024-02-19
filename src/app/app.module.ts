@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { JobOffersComponent } from './components/job-offers/job-offers.component';
-import { AddJobOfferComponent } from './components/dashboard/list-job-offer/add-job-offer/add-job-offer.component';
-import { ListJobOfferComponent } from './components/dashboard/list-job-offer/list-job-offer.component';
+import { AddJobOfferComponent } from './components/dashboard/add-job-offer/add-job-offer.component';
 import { HomeComponent } from './components/home/home.component';
 import {ShowJobOfferComponent} from "./components/job-offers/show-job-offer/show-job-offer.component";
 import {HttpClientModule} from "@angular/common/http";
@@ -22,6 +21,13 @@ import { NavbrComponent } from './components/navbr/navbr.component';
 import { StoreComponent } from './components/store/store.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import {MaterialModule} from "./material.module";
+import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatTableModule} from "@angular/material/table";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -30,7 +36,6 @@ import { RegisterComponent } from './components/register/register.component';
     JobOffersComponent,
     ShowJobOfferComponent,
     AddJobOfferComponent,
-    ListJobOfferComponent,
     HomeComponent,
     NavbrComponent,
     StoreComponent,
@@ -41,11 +46,12 @@ import { RegisterComponent } from './components/register/register.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({jobOffer: JobOfferReducer}),
     EffectsModule.forRoot([JobOfferEffects]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production})
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]
